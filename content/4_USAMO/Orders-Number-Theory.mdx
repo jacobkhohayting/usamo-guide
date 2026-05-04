@@ -50,13 +50,9 @@ Write $m = ord_p(a)$. To prove this, note that due to Divison Algorithm, we can 
 
 $$ a^k\equiv 1\pmod p \implies \left(a^{m}\right)^q\cdot a^r \equiv 1 \pmod p \implies a^r \equiv 1 \pmod p.$$
 
-But, if $0 < r < m$ then we contradict the minimality of order. So, $r = 0$ and so $m \mid k$, as desired.
+But, if $0 < r < m$ then we contradict the minimality of order. So, $r = 0$ and so $m \mid k$, as desired. $\blacksquare$
 
-Some students might also notice that: 
-
-*problem: Prove that $\text{ord}_p (a)\mid \phi (p) = p-1$. In particular, if $p$ is a prime then $\text{ord}_p (a)\mid p-1$. (Hint: use Euler's theorem directly.)*
-
-Thus the minimality of orders can be powerful if you know other exponents $k$ with $a^k\equiv 1\pmod p$. 
+In conjunction with Fermat's Little Theorem, it is clear that $a^{p-1} \equiv 1 \pmod p$, and so $\ord_p(a) \mid (p-1)$.
 
 ## primitive roots 
 
