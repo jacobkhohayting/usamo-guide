@@ -29,7 +29,9 @@ First, you may question how do you know this value exists. After all, what if, f
 To prove this, consider two sets $A = \{1,2,\ldots, p-1\}$ and $B = \{a\cdot 1, a\cdot 2,\ldots, a\cdot (p-1)\}$. We will show all elements of $B$ are distinct. Consider two elements $\epsilon_1,\epsilon_2 \in A$. For the sake of contradiction, suppose $a\cdot \epsilon_1$ and $a\cdot \epsilon_2$ are the same. Then,
 $$a\cdot \epsilon_1 - a\cdot \epsilon_2 \equiv a(\epsilon_1 - \epsilon_2) \equiv 0 \pmod p. $$
 As $\gcd(a,p) = 1$, then $\epsilon_1 - \epsilon_2 \equiv 0 \pmod p$, and so $\epsilon_1 \equiv \epsilon_2 \pmod p$. But, $0 \leq \epsilon_1, \epsilon_2 \leq p-1$, impossible, unless $\epsilon_1 = \epsilon_2$. Hence, all elements of $B$ are distinct. Nicely enough, we can multiply the elements of $A$ and $B$, and upon taking the results modulo $p$, they must be equal:
+
 $$ \prod A \equiv \prod B \implies (p-1)! \equiv a^{p-1} \cdot (p-1)! \pmod p \implies (p-1)! \cdot \left(a^{p-1}-1\right) \equiv 0 \pmod p.$$
+
 Note that $p$ is relatively prime to all elements of $A$, and so $\gcd(p, (p-1)!) = 1$. So, $a^{p-1} \equiv 1 \pmod p$, as desired.
 
 ## minimality 
