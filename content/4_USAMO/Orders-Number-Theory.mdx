@@ -44,7 +44,7 @@ With that conclusion, it is safe to conclude there exists an integer $m$ such th
 
 The power of orders is its minimality. To be more precise: 
 
-**Theorem 1.** If $k$ is a nonnegative integer such that $a^k\equiv 1\pmod p$, then $\operatorname{ord}_p(a) \mid k$.
+**Theorem 1.** If $k$ is a nonnegative integer such that $a^k\equiv 1\pmod p$, then $\text{ord}_p(a) \mid k$.
 
 Write $m = ord_p(a)$. To prove this, note that due to Divison Algorithm, we can write $k = mq+r$ for integers $m$, $q$, and $r$ where $0 \leq r < m. Notice, 
 
@@ -52,7 +52,7 @@ $$ a^k\equiv 1\pmod p \implies \left(a^{m}\right)^q\cdot a^r \equiv 1 \pmod p \i
 
 But, if $0 < r < m$ then we contradict the minimality of order. So, $r = 0$ and so $m \mid k$, as desired. $\blacksquare$
 
-In conjunction with Fermat's Little Theorem, it is clear that $a^{p-1} \equiv 1 \pmod p$, and so $\operatorname{ord}_p(a) \mid (p-1)$.
+In conjunction with Fermat's Little Theorem, it is clear that $a^{p-1} \equiv 1 \pmod p$, and so $\text{ord}_p(a) \mid (p-1)$.
 
 ## primitive roots 
 
