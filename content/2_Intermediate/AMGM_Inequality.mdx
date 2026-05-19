@@ -39,7 +39,7 @@ Instead, they may give you the equality, and you have to spot it!
 
 ## Examples
 
-### Example 1. 
+### Example 1. (Basic)
 
 Compute the minimum value of $x + \frac{4}{x}$ for $x>0$.
 
@@ -49,13 +49,17 @@ $$\frac{x + \frac{4}{x}}{2} \ge \sqrt{x \cdot \frac{4}{x}} = 2$$
 
 So, $x + \frac{4}{x} \ge 4$, with equality at $x=2$. Note that we can derive $x=2$ as the equality occurs when $x = \tfrac{4}{x}$.
 
-**Example 2.** For $a,b,c \ge 0$ with $abc=1$, compute the minimum of $a+b+c$.
+### Example 2. (More variables)
+
+For $a,b,c \ge 0$ with $abc=1$, compute the minimum of $a+b+c$.
 
 By AM-GM, $a+b+c \ge 3\sqrt[3]{abc} = 3$.
 
 This is when $a = b = c = 1$.
 
-**Example 3.** If $x+y=10$ and $x,y \ge 0$, find the maximum of $xy$.
+### Example 3. (Opposite)
+
+If $x+y=10$ and $x,y \ge 0$, find the maximum of $xy$.
 
 By AM-GM, 
 
@@ -63,7 +67,9 @@ $$\frac{x+y}{2} \ge \sqrt{xy} \iff 5 \geq \sqrt{xy}$$
 
 so $xy \le \boxed{25}$ at $x=y=5$.
 
-**Example 4.** Find the minimum of $x^2 + \frac{16}{x}$ for $x>0$.
+### Example 4. (Splitting)
+
+Find the minimum of $x^2 + \frac{16}{x}$ for $x>0$.
 
 By AM-GM, 
 
@@ -71,13 +77,15 @@ $$x^2 + \frac{8}{x}+\dfrac{8}{x} \ge 3 \sqrt[3]{x^2 \cdot \frac{64}{x^2}} = 3 \c
 
 Notably, this occurs when $x^2 = \frac{8}{x}$, and so when $x = 2$.
 
-**Example 5.** Find the minimum value of $x + y$ when $(x - 2)(y - 2) = 81$ for $x, y > 2$.
+### Example 5. (Unique)
+
+Find the minimum value of $x + y$ when $(x - 2)(y - 2) = 81$ for $x, y > 2$.
 
 From the given constraints, $x, y > 2$, rewrite this into $x - 2, y - 2, > 0$ and then apply AM-GM:
 
 $$(x-2) + (y-2) \ge 2 \sqrt{(x-2)(y-2)} = 2 \sqrt{81} = 18$$
 
-Which becomes $x+y \geq 22$. The equality occurs when $x - 2 = y-2$, which is when $x = y = 11$.
+which becomes $x+y \geq 22$. The equality occurs when $x - 2 = y-2$, which is when $x = y = 11$.
 
 ## Strategy Checklist
 
