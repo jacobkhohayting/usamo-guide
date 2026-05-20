@@ -22,7 +22,7 @@ Throughout this lesson and generally the chapter, we will reference the followin
 - A **secant line** is a line that intersects a circle at two points.
 - A **tangent line** is a line that touches a circle at exactly one point. When a radius is drawn from the center to this point, it will be perpendicular to the original tangent line.
 
-## The Theorem
+### The Theorem
 
 Now, using these definitions, we can make the following claim.
 
@@ -47,112 +47,54 @@ Regardless, the desired result follows. Now, it is also important to look at a n
 
 We can actually think of this scenario as exactly the same. As we move say line passing through $P$, $A$, and $C$ closer and closer to the edge of circle to obtain the desired tangency, then $PA$ and $PC$ approach the same value. Therefore, we end up with the following conclusion.
 
-## Applications
+> **Power of a Point.** Let $\omega$ be a circle and $P$ be a point on $\omega$. Points $X$, $Y$, $Z$ lie on $\omega$ such that $XY$ passes through $P$ and $PZ$ is tangent to $\omega$. Then
+> $$PX \cdot PY = PZ^2.$$
 
-### Identify the Configuration
+The proof isn't too far off from the proof for the case when $P$ is outside the circle mentioned above, so I won't go into too much detail. Rather, I will leave it as an exercise for the reader.
 
-If you see two intersecting secants, chords, or tangents, consider applying power of a point.
+### The Converse Holds!
 
-### Combine with Triangle Similarity or Angle Chasing
+Although this may not shock you, it should. This is one of the key ideas in many, many Olympiad geometry problems. This, in particular, is one of the many ways to prove a quadrilateral is cyclic.
 
-Triangle similarity and angle chasing were the two key strategies used in the proof of power of a point. 
+> **Converse of Power of a Point.** Let $A$, $B$, $C$, $D$, and $P$ be points such that
+> $$PA \cdot PC = PB \cdot PD.$$
+> It follows that $ABCD$ is cyclic.
 
-### Alternate Form
+Nicely enough, the proof for this is almost the exact same as above but whose steps are taken in reverse. To stress once again, while the initial statement can heavily be used for finding lengths in computational contests, this converse proposal is a key idea in many, many Olympiad geometry problems which we will look at very soon.
 
-If the distance from point $P$ to center $O,$ and radius $r$ are known, we can construct a secant/chord. Then, the power of point $P$ equals $|OP^2-r^2|,$ the absolute value included due to the two cases of $P$ being inside or outside the circle. Note that this expression is equal to $|(OP-r)(OP+r)|,$ making the geometric significance clearer.
+## Putting everything together
 
-In the below diagram, $(PA)(PB) = (r-OP)(r+OP) = r^2-OP^2 = (PC)(PD).$
+> **Example 1** (American Mathematics Competition). In unit square $ABCD$, the inscribed circle $\omega$ intersects $CD$ at $M$, and $AM$ intersects $\omega$ at a point $P$ different from $M$. Compute $AP$.
 
-<div style={{ display: 'flex', justifyContent: 'center', margin: '2rem 0' }}>
-  <svg viewBox="0 0 350 300" width="300" height="260">
-    <circle cx="210" cy="150" r="100" fill="none" stroke="black" strokeWidth="2" />
+The condition implies $M$ is the midpoint of $CD$. Due to Pythagoras,
 
-    <circle cx="210" cy="150" r="3" fill="black" /> {/* O (Center) */}
-    <text x="215" y="165" fontSize="16">O</text>
+$$AM = \sqrt{AD^2 + DM^2} = \sqrt{1^2+\left(\tfrac{1}{2}\right)^2} = \tfrac{\sqrt{5}}{2}.$$
 
-    <circle cx="110" cy="150" r="4" fill="black" /> {/* A */}
-    <text x="110" y="140" fontSize="16">A</text>
+Let $N$ be the point of tangency between $\omega$ and $AD$. Then, by taking Power of the Point at $A$,
 
-    <circle cx="310" cy="150" r="4" fill="black" /> {/* B */}
-    <text x="315" y="145" fontSize="16">B</text>
+$$AN^2 = AM \cdot AP \implies \left(\dfrac{1}{2}\right)^2 = \dfrac{\sqrt{5}}{2}\cdot AP \implies AP = \dfrac{1}{2\sqrt{5}} = \dfrac{\sqrt{5}}{10}.$$
 
-    <circle cx="150" cy="230" r="4" fill="black" /> {/* C */}
-    <text x="150" y="250" fontSize="16">C</text>
+> **Example 2** (USA Junior Mathematics Olympiad). Let $ABCD$ be a convex quadrilateral inscribed in a circle and satisfying $DA < AB = BC < CD$. Points $E$ and $F$ are chosen on sides $CD$ and $AB$ such that $BE \perp AC$ and $EF \parallel BC$. Prove that $FB = FD$.
 
-    <circle cx="170" cy="59" r="4" fill="black" /> {/* D */}
-    <text x="175" y="65" fontSize="16">D</text>
+Angle chasing, we have that
 
-    <circle cx="160" cy="150" r="5" fill="red" /> {/* P */}
-    <text x="165" y="165" fontSize="16" fill="red" fontWeight="bold">P</text>
+$$\angle FBD = \angle ABD = \angle ACD = \angle ACE.$$
 
-    <line x1="110" y1="150" x2="310" y2="150" stroke="black" strokeWidth="2" /> {/* A-B chord through P */}
-    <line x1="150" y1="230" x2="170" y2="59" stroke="black" strokeWidth="2" /> {/* C-D chord through P */}
-  </svg>
-</div>
+In addition,
 
-In the below diagram, $(PA)(PB) = (OP-r)(OP+r) = OP^2-r^2 = (PC)(PD).$
+$$\angle FED + \angle FAD = BCD + \left(180^{\circ} - \angle BCD\right) = 180^{\circ},$$
 
-<div style={{ display: 'flex', justifyContent: 'center', margin: '2rem 0' }}>
-  <svg viewBox="0 0 350 300" width="300" height="260">
-    <circle cx="210" cy="150" r="100" fill="none" stroke="black" strokeWidth="2"/>
+thus $AFED$ is cyclic. So, $\angle AFD = \angle AED$, so $\angle BFD = \angle AEC$. Thus, $\triangle BFD \sim \triangle AEC$. Since $AE = EC$ as $E$ is on the perpendicular bisector of $AC$, then $FB = FD$, as desired.
 
-    <circle cx="210" cy="150" r="3" fill="black"/> {/* O (Center) */}
-    <text x="210" y="170" fontSize="16">O</text>
+## Alternate Form
 
-    <circle cx="110" cy="150" r="4" fill="black"/> {/* A */}
-    <text x="110" y="140" fontSize="16">A</text>
+Consider a circle $\omega$ with center $O$ and radius $r$. Let $P$ be an arbitrary point. Then, we define the power of $P$ with respect to $\omega$ to be
 
-    <circle cx="310" cy="150" r="4" fill="black"/> {/* B */}
-    <text x="315" y="145" fontSize="16">B</text>
+$$\text{Pow}(\omega, P) = PO^2 - r^2.$$
 
-    <circle cx="296.6" cy="200" r="4" fill="black"/> {/* C */}
-    <text x="305" y="215" fontSize="16">C</text>
+This will have more use later. But, for now, we will let allow a lingering question about what this function can do and its power.
 
-    <circle cx="115.4" cy="164.7" r="4" fill="black"/> {/* D */}
-    <text x="100" y="185" fontSize="16">D</text>
-
-    <circle cx="40" cy="150" r="5" fill="red"/> {/* P */}
-    <text x="25" y="145" fontSize="16" fill="red" fontWeight="bold">P</text>
-
-    <line x1="40" y1="150" x2="310" y2="150" stroke="black" strokeWidth="2"/> {/* P-B (thru center) */}
-    <line x1="40" y1="150" x2="296.6" y2="200" stroke="black" strokeWidth="2"/> {/* P-C (secant) */}
-  </svg>
-</div>
-
-
-
-## Common Mistakes
-
-- **Mixing up order along a secant:** In the case where $P$ is outside the circle, ensure you are multiplying $PA \cdot PB,$ and not $PA \cdot AB$ or similar. Be especially cautious of this mistake when the lengths for $PA$ and $AB$ are marked, as it may be tempting to multiply by $AB$ instead of $PB.$ 
-<!-- Using power-of-point for an interior point without absolute values. -->
-- **Mixing up secant and tangent:** Accidentally squaring a secant length (e.g. $PA^2$ instead of using the product $(PA)(PB).$)
-- **Incorrectly applying:** Applying power of a point when two segments through $P$ appear to be part of the same line, but are actually not. 
-
-
-
-## Worked Example
-
-A circle has radius $5$. Point $P$ is $8$ units from the center. If a secant
-through $P$ meets the circle at $A$ and $B$ with $PA=2$, find $PB$.
-
-Power is $8^2-5^2=39$. So $2\cdot PB = 39$, giving $PB=39/2$.
-
-## More Examples
-
-### Example 1: Tangent Length
-
-Point $P$ is $13$ units from the center of a circle of radius $5$. Find the
-tangent length.
-
-$PT^2=13^2-5^2=144$, so $PT=12$.
-
-### Example 2: Two Secants
-
-From $P$, one secant has $PA=3$ and $PB=15$. Another secant has $PC=5$.
-Find $PD$.
-
-$3\cdot 15 = 5\cdot PD$, so $PD=9$.
-
+A quick way to see the usefulness of this is the following: let $AB$ be a diameter of $\omega$ passing through $P$. Then, $PA \cdot PB = (PO-r)(PO+r)$. it follows that for any points $A$ and $B$ where segment $AB$ contains $P$, then $\text{Pow}(\omega, P) = AP \cdot PB$.
 
 
 ## Practice Problems
