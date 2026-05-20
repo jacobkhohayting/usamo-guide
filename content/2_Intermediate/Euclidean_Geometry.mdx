@@ -6,22 +6,46 @@ description: Similarity, power of a point, and classic circle theorems.
 prerequisites: ["geometry-basics"]
 ---
 
-## Overview
+## Introduction
 
-Euclidean geometry problems rely on angle chasing and similarity. Power of a
-point and cyclic quadrilaterals are frequent tools in AMC 12 and AIME.
+This lesson is the first section towards progressing past our findings we have discovered in the ``foundations'' section. This lesson will mainly be treated as a review, but will be keep as what is to come. It is important that we solidify our knowledge on what we know.
 
-## Core Skills
+Thus far, we have discussed angle chasing, area formulas, and similar triangles. Throughout this chapter, we will continue using these ideas towards fresh new findings. In essence, throughout foundations, we learned about various techniques, but now we will apply them towards new ideas.
+
+The ultimate goal is to build a repertoire where you understand each fact and can reason why each fact holds.
+
+## Handpicked Techniques
+
+### Philosophy
+
+Two idea that I like to facilitate are 
+
+- ``Make your diagram a work of art,'' and 
+- ``Label everything you know.'' 
+
+In essence, your diagrams that you draw should be almost perfectly accurate and labeled. You want to be able to draw conclusions from your diagrams with ease.
 
 ### Angle Chasing
 
-Mark known angles, use linear pairs and triangle sums, and track equal angles
-from parallel lines or cyclic quadrilaterals.
+In general, I like to say ``When you don't know what to do, just angle chase!'' You will be awfully surprised as to how well this goes. Unfortunately, it isn't so simple all the time. Here is a sample idea:
+>
+  \textbf{Identify any pairs of equal angles in the following setup.} \\
+  Consider a triangle $ABC$ and there exists a point $P$ such that $AP = BP = CP$.
+>
 
-### Similarity First
+Observations. The above is a simple example. Note that equal sides means equal angles. For instance, $\triangle APB$ is isosceles with $AP = BP$. It therefore follows that $\angle PAB = \angle PBA$. Likewise, $\angle PBC = \angle PCB$ and $\angle PCA = \angle PAC$.
 
-Look for AA similarity before heavy computation. Similar triangles give
-proportions and angle equality quickly.
+In this instance, it is important to notice equal sides implies equal angles. Now, not every problem is like this. You may have to notice some different ideas to obtain angle relationships. But, it all revolves around the key idea of using angles to establish relationships which will ultimately lead to fresh conclusions.
+
+\begin{exercise}
+\textbf{Example 1} (American Mathematics Competition)\textbf{.} Let $ABCD$ be a square and $E$ be a point outside square $ABCD$ such that $ABE$ is an equilateral triangle. Compute the measure of $\angle AED$, in degrees.
+\end{exercise}
+
+Consider triangle $AED$: note that as $AD = AB$ due to square $ABCD$ and $AB = AE$ due to equilateral triangle $ABE$. Hence, it follows that $AE = AD$ and $\triangle ADE$ is isosceles. Angle chasing,
+\begin{align*}
+    \angle DAE = \angle DAB + \angle BAE = 150^{\circ}.
+\end{align*}
+It therefore follows that $\angle AED = \dfrac{180 - \angle AED}{2} = 15^{\circ}$.
 
 ### Use Power of a Point
 
